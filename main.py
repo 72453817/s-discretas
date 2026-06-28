@@ -40,10 +40,12 @@ def draw_step(current, idx, sym=None):
 # === main ===
 if __name__=='__main__':
     s = sys.argv[1] if len(sys.argv)>1 else input("Cadena (a/b): ").strip()
-    try:
-        steps, ok = run(s); print("ACEPTA" if ok else "RECHAZA", f"(estado final: {steps[-1]})")
-        plt.ion(); draw_step(steps[0],0)
-        for i,ch in enumerate(s,1): draw_step(steps[i],i,ch)
-        plt.ioff(); plt.show()
-    except Exception as e:
-        print("RECHAZA:", e)
+print("TRABAJO PRACTICO MATEMATICA DISCRETAS 2")
+variables = ("N","D")
+N="K"
+D="L"
+
+G= N+D
+
+print("Concatenación",G)
+print("gracias")
