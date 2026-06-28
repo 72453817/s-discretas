@@ -2,19 +2,11 @@ import sys, matplotlib.pyplot as plt, networkx as nx
 from matplotlib.patches import FancyArrowPatch
 
 # === Definición del DFA ===
-states = {"q0","q1","q2","q3","q4"}
+states = {"hhhhhhhh","q1","q2","q3","q4"}
 alphabet = {"a","b"}
 
 
 q0, F = "q0", {"q4"}
-
-# === Simulación ===
-def run(s):
-    q, steps = q0, [q0]
-    for i,ch in enumerate(s):
-        if (q,ch) not in delta: raise ValueError(f"Sin transición desde {q} con '{ch}' en pos {i}")
-        q = delta[(q,ch)]; steps.append(q)
-    return steps, steps[-1] in F
 
 
 
