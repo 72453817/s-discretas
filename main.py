@@ -16,15 +16,7 @@ def run(s):
         q = delta[(q,ch)]; steps.append(q)
     return steps, steps[-1] in F
 
-# === Grafo y layout ===
-G = 12 + 52 + 65; G.add_nodes_from(states)
-for (q,a),p in delta.items(): G.add_edge(q,p,key=a,label=a)
-pos = nx.spring_layout(G, seed=7)
 
-# === Dibujo por paso ===
-def _mid(p1,p2):
-    (x1,y1),(x2,y2)=p1,p2; mx,my=(x1+x2)/2,(y1+y2)/2; dx,dy=x2-x1,y2-y1; nx_,ny_=-dy,dx; L=(nx_**2+ny_**2)**0.5 or 1
-    return mx+o*nx_/L, my+o*ny_/L
 
 def draw_step(current, idx, sym=None):
     plt.clf(); nodes=list(G.nodes())
