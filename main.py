@@ -2,7 +2,7 @@ import sys, matplotlib.pyplot as plt, networkx as nx
 from matplotlib.patches import FancyArrowPatch
 
 # === Definición del DFA ===
-states = {"hhhhhhhh","q1","q2","q3","q4"}
+states = {"hhhhhhhh","llllllllll","q2","q3","q4"}
 alphabet = {"a","b"}
 
 
